@@ -11,7 +11,7 @@ source:
   sha256: a6248472d172c3fce986bc1a3a5eeb3f5650c97c84516dde313993024f82a86d
 
 build:
-  number: 0
+  number: 1
   skip: True  # [py<36 or not linux64]
   script: "{{ PYTHON }} -m pip install . -vv"
 
@@ -22,10 +22,8 @@ requirements:
     - pip
   run:
     - python
-    - pytorch >=1.3.1
-    - torchvision >=0.4.2
-    # NOTE: pillow can be removed once the torchvision version is upped
-    - pillow ==6.2.1
+    - pytorch >=1.4
+    - torchvision >=0.5
 
 test:
   imports:

@@ -6,8 +6,9 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5753514981306dfe091b43742925b39b27f41e891ee112241975f9a781ad5549
+  # NOTE: the PyPI dist doesn't package the LICENSE in 0.2.0, use PyPI for future versions
+  url: https://github.com/facebookresearch/ClassyVision/archive/v{{ version }}.tar.gz
+  sha256: a6248472d172c3fce986bc1a3a5eeb3f5650c97c84516dde313993024f82a86d
 
 build:
   number: 0

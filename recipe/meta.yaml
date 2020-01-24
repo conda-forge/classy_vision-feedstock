@@ -1,14 +1,13 @@
 {% set name = "classy_vision" %}
-{% set version = "0.1.0" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name }}
   version: {{ version }}
 
 source:
-  # NOTE: the PyPI sdist is broken for 0.1.0, use PyPI for future versions
-  url: https://github.com/facebookresearch/ClassyVision/archive/{{ version }}.tar.gz
-  sha256: e6cbb9a68a3e8ece4365f006dcb0823df85ec8b860270af5cd752f2f7ea6cbe2
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 5753514981306dfe091b43742925b39b27f41e891ee112241975f9a781ad5549
 
 build:
   number: 0

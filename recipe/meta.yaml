@@ -1,14 +1,13 @@
 {% set name = "classy_vision" %}
-{% set version = "0.2.0" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name }}
   version: {{ version }}
 
 source:
-  # NOTE: the PyPI dist doesn't package the LICENSE in 0.2.0, use PyPI for future versions
-  url: https://github.com/facebookresearch/ClassyVision/archive/v{{ version }}.tar.gz
-  sha256: a6248472d172c3fce986bc1a3a5eeb3f5650c97c84516dde313993024f82a86d
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 16b958971af2f3c388c2becf79b7f8ef2a35ee80f003ee67e573af6c9c3cfc74
 
 build:
   number: 0
@@ -55,3 +54,4 @@ extra:
   recipe-maintainers:
     - mannatsingh
     - vreis
+    - aadcock

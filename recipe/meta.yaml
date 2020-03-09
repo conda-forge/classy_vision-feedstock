@@ -25,6 +25,7 @@ requirements:
     - torchvision >=0.4.2
     # NOTE: pillow can be removed once the torchvision version is upped
     - pillow ==6.2.1
+    - fvcore
 
 test:
   imports:

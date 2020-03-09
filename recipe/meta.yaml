@@ -25,20 +25,10 @@ requirements:
     - torchvision >=0.4.2
     # NOTE: pillow can be removed once the torchvision version is upped
     - pillow ==6.2.1
-    - fvcore
 
 test:
   imports:
     - classy_vision
-    - classy_vision.dataset
-    - classy_vision.heads
-    - classy_vision.hooks
-    - classy_vision.losses
-    - classy_vision.meters
-    - classy_vision.models
-    - classy_vision.optim
-    - classy_vision.tasks
-    - classy_vision.trainer
   commands:
     - classy-project test_project
 

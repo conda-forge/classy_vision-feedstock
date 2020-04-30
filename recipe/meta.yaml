@@ -1,5 +1,5 @@
 {% set name = "classy_vision" %}
-{% set version = "0.3.0" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 16b958971af2f3c388c2becf79b7f8ef2a35ee80f003ee67e573af6c9c3cfc74
+  sha256: d935595e7b0c13a4f0d6e16a3bfb7d5d9e87755828c0e4d14a449d6e1e4755e7
 
 build:
   number: 0
-  skip: True  # [py<36 or not linux64]
-  script: "{{ PYTHON }} -m pip install . -vv"
+  skip: true  # [py<36 or not linux64]
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -37,7 +37,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: "An end-to-end PyTorch framework for image and video classification"
+  summary: An end-to-end PyTorch framework for image and video classification
   doc_url: https://classyvision.ai/
   dev_url: https://github.com/facebookresearch/ClassyVision/
 

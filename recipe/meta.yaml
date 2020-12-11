@@ -22,7 +22,7 @@ requirements:
   run:
     - python
     - pytorch >=1.5
-    - torchvision >=0.5
+    - torchvision >=0.6
 
 test:
   imports:

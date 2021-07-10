@@ -1,5 +1,5 @@
 {% set name = "classy_vision" %}
-{% set version = "0.5.0" %}
+{% set version = "0.6.0" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 469b0f1c4f55e2b6a0c1338cc4e357bb87eadedf22b63b05adb2ee61106f6aa8
+  sha256: 632b3d4fc2daefe9a4955947ee7dd62b82c332dc480a4f49337a6984562d8316
 
 build:
   number: 0

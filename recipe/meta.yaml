@@ -1,5 +1,5 @@
 {% set name = "classy_vision" %}
-{% set version = "0.5.0" %}
+{% set version = "0.7.0" %}
 
 package:
   name: {{ name }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 469b0f1c4f55e2b6a0c1338cc4e357bb87eadedf22b63b05adb2ee61106f6aa8
+  sha256: 6b06604ec48f75219307a5b3156aed0869b3f423e80fa94babcfef0f8d9be8b3
 
 build:
-  number: 1
+  number: 0
   skip: true  # [py<36 or not linux64 or py>37]
   script: {{ PYTHON }} -m pip install . -vv
 

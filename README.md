@@ -1,11 +1,11 @@
-About classy_vision
-===================
+About classy_vision-feedstock
+=============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/classy_vision-feedstock/blob/main/LICENSE.txt)
 
 Home: https://classyvision.ai
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/classy_vision-feedstock/blob/main/LICENSE.txt)
 
 Summary: An end-to-end PyTorch framework for image and video classification
 
@@ -18,31 +18,6 @@ Current build status
 
 
 <table>
-    
-  <tr>
-    <td>Azure</td>
-    <td>
-      <details>
-        <summary>
-          <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8834&branchName=main">
-            <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/classy_vision-feedstock?branchName=main">
-          </a>
-        </summary>
-        <table>
-          <thead><tr><th>Variant</th><th>Status</th></tr></thead>
-          <tbody><tr>
-              <td>linux_64_python3.7.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8834&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/classy_vision-feedstock?branchName=main&jobName=linux&configuration=linux_64_python3.7.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </details>
-    </td>
-  </tr>
 </table>
 
 Current release info
@@ -50,7 +25,7 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-classy_vision-green.svg)](https://anaconda.org/conda-forge/classy_vision) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/classy_vision.svg)](https://anaconda.org/conda-forge/classy_vision) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/classy_vision.svg)](https://anaconda.org/conda-forge/classy_vision) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/classy_vision.svg)](https://anaconda.org/conda-forge/classy_vision) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-classy__vision-green.svg)](https://anaconda.org/conda-forge/classy_vision) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/classy_vision.svg)](https://anaconda.org/conda-forge/classy_vision) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/classy_vision.svg)](https://anaconda.org/conda-forge/classy_vision) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/classy_vision.svg)](https://anaconda.org/conda-forge/classy_vision) |
 
 Installing classy_vision
 ========================
@@ -62,16 +37,41 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `classy_vision` can be installed with:
+Once the `conda-forge` channel has been enabled, `classy_vision` can be installed with `conda`:
 
 ```
 conda install classy_vision
 ```
 
-It is possible to list all of the versions of `classy_vision` available on your platform with:
+or with `mamba`:
+
+```
+mamba install classy_vision
+```
+
+It is possible to list all of the versions of `classy_vision` available on your platform with `conda`:
 
 ```
 conda search classy_vision --channel conda-forge
+```
+
+or with `mamba`:
+
+```
+mamba search classy_vision --channel conda-forge
+```
+
+Alternatively, `mamba repoquery` may provide more information:
+
+```
+# Search all versions available on your platform:
+mamba repoquery search classy_vision --channel conda-forge
+
+# List packages depending on `classy_vision`:
+mamba repoquery whoneeds classy_vision --channel conda-forge
+
+# List dependencies of `classy_vision`:
+mamba repoquery depends classy_vision --channel conda-forge
 ```
 
 
@@ -89,17 +89,19 @@ for each of the installable packages. Such a repository is known as a *feedstock
 A feedstock is made up of a conda recipe (the instructions on what and how to build
 the package) and the necessary configurations for automatic building using freely
 available continuous integration services. Thanks to the awesome service provided by
-[CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/)
-and [TravisCI](https://travis-ci.com/) it is possible to build and upload installable
-packages to the [conda-forge](https://anaconda.org/conda-forge)
-[Anaconda-Cloud](https://anaconda.org/) channel for Linux, Windows and OSX respectively.
+[Azure](https://azure.microsoft.com/en-us/services/devops/), [GitHub](https://github.com/),
+[CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
+[Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
+it is possible to build and upload installable packages to the
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
+channel for Linux, Windows and OSX respectively.
 
-To manage the continuous integration and simplify feedstock maintenance
+To manage the continuous integration and simplify feedstock maintenance,
 [conda-smithy](https://github.com/conda-forge/conda-smithy) has been developed.
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
-For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
+For more information, please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========
@@ -126,7 +128,7 @@ merged, the recipe will be re-built and uploaded automatically to the
 everybody to install and use from the `conda-forge` channel.
 Note that all branches in the conda-forge/classy_vision-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
-on branches in forks and branches in the main repository should only be used to
+on branches in forks, and branches in the main repository should only be used to
 build distinct package versions.
 
 In order to produce a uniquely identifiable distribution:
